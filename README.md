@@ -1,3 +1,3 @@
-# Express Sample
+# Maestro Sample
 
-This is a sample Express project to be deployed with [Cloud 66](https://cloud66.com).
+This is a sample Maestro project to be deployed with [Cloud 66](https://cloud66.com).
